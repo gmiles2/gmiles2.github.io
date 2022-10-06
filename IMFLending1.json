@@ -1,0 +1,40 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+      "text": "Lending by the IMF ",
+      "subtitle":"Loans distributed by the IMF, billions of dollars ($)",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+  
+  "data":{"url":"https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/data_IMF_creditOutstanding.csv"},
+  
+"transform": [
+  {"calculate": "datum.Totals/1000000000", "as": "billions"}
+],
+
+  "height": 300,
+  "width": 300,
+
+  "mark": {
+    "type": "bar",
+    "color": "#450cc9"},
+
+"encoding": {
+     "x": {
+       "field": "Year",
+       "type": "temporal",
+       "axis": {
+         "title": null,
+         "grid": false,
+         "ticks": false,
+         "labelAngle": 40}},
+
+      "y": {
+        "field": "billions",
+        "type": "quantitative",
+        "title": "",
+        "axis": {"grid": false}}
+}
+}

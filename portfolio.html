@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!---This is my first attempt at making a portfolio page for my DataScience project ;)-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title for the page -->
+    <title>George Miles - Portfolio</title>
+
+    <!-- Link to my style sheet ---- IMPORTANT LINK BETWEEN HTML AND CSS FILES! -->
+    <link rel="stylesheet" href="portfolio_css.css">
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+</head>
+
+
+
+<body>
+    <!-- A div that contains a group of items for week 1. Can be useful for setting background colours etc.  -->
+    <div class="myWeek1">
+        <h1>DataScience Portfolio</h1>
+        <a href="index.html">Home</a>
+        <a href="project.html">My Project</a>
+        <a href="https://github.com/gmiles2/gmiles2.github.io"> GitHub Repository</a>
+        <a href="cv.html">CV and Contact</a>
+
+
+
+        <h2>Week 1 - Setting up and embedding two charts</h2>
+
+        <h3>Size of the UK Economy</h3>
+        <p>This is an interactive graph displaying the nominal GDP of the UK economy 
+            for between 1955 and 2021.
+        </p>
+
+        <div class="chart" id="Vis1"></div>
+        
+
+        <h3>Korea's Ageing Population</h3>
+        <p>The share of the population who are older than 65 has risen from 3% to 
+            16% in the last 60 years. The figure below shows Koreas populaton is expected to
+            continue to age until around 35% of the population is 65 or older.
+        </p>
+        <div class="chart" id="Vis2"> </div>
+    
+    </div> 
+
+    <div class ="myWeek2">
+        <h2>Week 2 - Making two charts</h2>
+
+
+        <h3>A chart on outstanding IMF lending</h3>
+        <div class ="chart" id="Vis3"></div>
+
+        <h3>Improvement of the Financial Times graph</h3>
+        <div class="chart" id="Vis4"></div>
+        <p>This second graph clearly shows that in 1984 the amount of IMF lending
+            as a percentage of global GDP was considerably higher at 0.31 percent,
+            compared to 0.10 percent in 2022. Therefore, we can conlude that even
+            though the debt taken on by the IMF has increased over this period, at the same time global GDP has risen by 
+            a larger proportion. </p>
+        
+    </div> 
+</body>
+
+    <!---->
+<script>
+    //Define charts:
+    var myVis1 = "new_vis1_interactive.json";
+    var myVis2 = "new_vis2_population.json";
+    var myVis3 = "IMFLending1.json";
+    var myVis4 = "FTCorrected2.json";
+
+    // Embed charts:
+    vegaEmbed('#Vis1', myVis1);
+    vegaEmbed('#Vis2', myVis2);
+    vegaEmbed('#Vis3', myVis3);
+    vegaEmbed('#Vis4', myVis4);
+</script>
+
+</html>
+
+

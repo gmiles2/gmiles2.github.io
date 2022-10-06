@@ -1,0 +1,92 @@
+
+/* Import a font */
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap');
+
+/* Set the background color for my page: */
+
+/* Book on colour = Joseph Albers - Interaction of Colour */
+
+body{
+    background-image: linear-gradient(rgb(231, 131, 37),rgb(230, 215, 14));
+    text-align: center;
+ }
+
+
+/* Choose the appearance of the tags, h1, h3 and p: */
+h1{
+    color:rgb(228, 121, 22);
+    font-family: 'Maven Pro', sans-serif;
+    text-align: center;
+}
+
+h2{
+    color:rgb(29, 96, 221);
+    font-family: 'Maven Pro', sans-serif;
+    text-align: center;
+}
+
+h3, p{
+    color:rgb(0, 0, 0);
+    font-family: 'Maven Pro', sans-serif;
+    text-align: center;
+}
+    
+.myWeek1{
+    margin: auto;
+    max-width: 600px;
+    background-color: rgb(226, 226, 226);
+
+      
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(0,0,0);
+    margin-bottom: 10px;
+}
+
+.myWeek2{
+    margin: auto;
+    max-width: 600px;
+    background-color: rgb(226, 226, 226);
+
+      
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(0,0,0);
+    margin-bottom: 10px;
+
+}
+/* Set the apperance of the class, chart */
+.chart{
+    background-color: white;
+    width:400px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 9px;
+    border-color: black;
+    
+}
+    
+a{
+    background-color: rgba(20, 128, 47 0.6);
+    padding: 10px;
+
+    border: 2px;
+    border-radius: 10px;
+    border-style: inset;
+    border-color: grey;
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: black;
+}
+
+a:hover{
+    background-color: rgba(rgb(20, 128, 47), 0.8);
+
+    border: 2px;
+    border-color: rgb(250, 162, 0);
+    border-style: solid;
+}

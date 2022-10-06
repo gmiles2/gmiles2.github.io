@@ -1,0 +1,49 @@
+/* FONTS */
+
+.title{
+font-size: 55px;
+margin-bottom: 20px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: 300;
+
+}
+
+body{
+    background-color:rgb(238, 238, 238);
+    max-width: auto;
+    text-align: center;
+
+}
+
+
+p{
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+
+/*Buttons */
+
+a{
+    background-color: rgba(rgb(20, 128, 47), 0.6);
+    padding: 10px;
+
+    border: 2px;
+    border-radius: 10px;
+    border-style: inset;
+    border-color: grey;
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+}
+
+a:hover{
+    background-color: rgba(rgb(20, 128, 47), 0.8);
+
+    border: 2px;
+    border-color: rgb(16, 231, 142);
+    border-style: solid;
+
+}
