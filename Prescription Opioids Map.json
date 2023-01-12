@@ -1,0 +1,67 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#dad9d9",
+  "width": 500,
+  "height": 300,
+  "title": {
+    "text": "Overdoses from Prescription Opioids in the United States",
+    "fontSize": 12,
+    "subtitle": "Which ICD category is Prescription Opioids'",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "middle"
+  },
+  "params": [
+    {
+      "name": "yearSelector",
+      "value": 2009,
+      "bind": {
+        "input": "range",
+        "min": 1999,
+        "max": 2020,
+        "step": 1,
+        "name": "Year:"
+      }
+    }
+  ],
+  "projection": {"type": "albersUsa"},
+  "mark": {
+    "type": "geoshape",
+    "fiXYZll": "black",
+    "stroke": "darkcyan",
+    "strokeWidth": 0.5
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Prescription%20Opioids%20US%20Data.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {"calculate": "toNumber(yearSelector)", "as": "yearS"},
+    {"filter": "datum.yearS == datum.Year"},
+    {
+      "lookup": "State",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Week7_Maps.json",
+          "format": {"property": "features"}
+        },
+        "key": "properties.NAME",
+        "fields": ["properties", "type", "geometry"]
+      }
+    }
+  ],
+  "encoding": {
+    "color": {
+      "field": "Crude Rate",
+      "type": "quantitative",
+      "legend": {"title": null, "orient": "right", "direction": "vertical"},
+      "scale": {"scheme": "purples"}
+    },
+    "tooltip": [
+      {"field": "properties.NAME", "type": "nominal", "title": "State"},
+      {"field": "Crude Rate", "type": "nominal", "title": "Overdose Rate"},
+      {"field": "Deaths", "type": "nominal", "title": "Overdose Deaths"}
+    ]
+  },
+  "config": {}
+}

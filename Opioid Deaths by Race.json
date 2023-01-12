@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#dad9d9",
+  "width": 200,
+  "height": 250,
+  
+  
+
+  
+  "title": {
+    "text": "US Opioid Deaths by Ethincity",
+    "subtitle": "Crude rate of opioid overdoses amongst different ethnic groups across the whole of the US",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 9,
+    "anchor": "start",
+    "color": "black"
+  },
+
+
+
+
+
+  "params": [
+    {
+      "name": "yearSelector",
+      "value": 2015,
+      "bind": {
+        "input": "range",
+        "min": 1999,
+        "max": 2020,
+        "step": 1,
+        "name": "Year Selector:"
+      }
+    }
+  ],
+  "data": {
+    "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Opioid%20Deaths%20by%20Race.csv"
+  },
+  "mark": {"type": "arc", "innerRadius": 50},
+  "transform": [
+    {"calculate": "toNumber(yearSelector)", "as": "yearS"},
+    {"filter": "datum.yearS == datum.Year"}
+  ],
+  "encoding": {
+    "theta": {"field": "Crude Rate", "type": "quantitative"},
+    "color": {"field": "Race", "type": "nominal", "scale": {"scheme": "set1"}},
+    "tooltip": [
+      {"field": "Race", "type": "nominal", "title": "Ethnicity"},
+      {"field": "Crude Rate", "type": "nominal", "title": "Death Rate"},
+      {"field": "Deaths", "type": "nominal", "title": "Deaths"}
+    ]
+  },
+  "config": {}
+}

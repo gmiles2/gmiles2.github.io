@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Recorded Opioid Overdose Deaths ",
+      "subtitle": "The number of deaths involving opioids for 1990 to 2019",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":9,
+      "anchor": "start",
+      "color": "black"
+    },
+    "width": 220,
+    "height": 250,
+    "background": "#dad9d9",
+    "config": {
+      "axis": {
+        "grid": true,
+        "gridColor": "#ffffff"}},
+    "data": {
+      "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/World%20Drug%20Deaths%20.csv"
+    },
+  
+  "mark": {
+      "type": "line",
+      "point":{
+          "filled": false,
+          "fill":"white",
+          "size": 25
+      }
+  },
+          
+  "encoding": { 
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "title": "Year",
+        "axis": {"labelAlign": "center"}
+      },
+      "y": {
+        "field": "Opioid Deaths",
+        "type": "quantitative",
+        "title": "Opioid Overdose Deaths"
+      },
+      "color": {"field": "Country", "type": "nominal", "scale": {"scheme":"paired"}, "legend":{"labelFontSize":9, "titleFontSize":10}},
+
+      "tooltip": [
+        {"field": "Country", "type": "nominal", "title": ""},
+        {"field": "Opioid Deaths", "type": "quantitative", "title": "Opioid Deaths", "format":","}
+
+      ]
+    }}
+
+    

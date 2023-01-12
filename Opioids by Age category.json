@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "US Opioid Overdoses by Ten-Year Age Groups",
+    "subtitle": "Number of recorded drug deaths over the whole of the US for 11 different age categories ",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 8,
+    "anchor": "start",
+    "color": "black"
+  },
+  "background": "#dad9d9",
+  "width": 250,
+  "height": 250,
+  "data": {
+    "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Opioid%20Deaths%20by%20Age.csv",
+    "format": {"type": "csv"}
+  },
+  "params": [
+    {"name": "highlight", "select": {"type": "point", "on": "mouseover"}},
+    {
+      "name": "yearSelector",
+      "value": 2010,
+      "bind": {
+        "input": "range",
+        "min": 1999,
+        "max": 2020,
+        "step": 1,
+        "name": "Year Selector:"
+      }
+    }
+  ],
+  "mark": {"type": "bar"},
+  "transform": [
+    {"calculate": "toNumber(yearSelector)", "as": "yearS"},
+    {"filter": "datum.yearS == datum.Year"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "Ten-Year Age Groups Code",
+      "type": "nominal",
+      "title": "Year",
+      "sort": ["1", "1-4", "5-14", "15-24", "25-34"]
+    },
+    "y": {"field": "Crude Rate", "type": "quantitative", "title": null},
+    "color": {
+      "field": "Ten-Year Age Groups",
+      "type": "nominal",
+      "legend": null,
+      "scale": {"scheme": "blues"},
+      "fillOpacity": {
+        "condition": {"params": "highlight", "value": 1},
+        "value": 0.6
+      }
+    },
+    "tooltip": [
+      {"field": "Ten-Year Age Groups", "type": "nominal", "title": "Age"},
+      {"field": "Deaths", "type": "nominal", "title": "Overdose Deaths", "format":","},
+      {"field": "Crude Rate", "type": "nominal", "title": "Overdose Rate"}
+    ]
+  },
+  "config": {}
+}

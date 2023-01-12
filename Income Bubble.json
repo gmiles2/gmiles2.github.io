@@ -1,0 +1,68 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Opioid Death Rate Vs Average State Income",
+      "subtitle": [
+        "Crude Opioid Death Rate (x), Average State Income (y). Data from 2019",
+        "Size of points based on popluation", ""
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "config": {"background": "white", "view": {"stroke": "transparent"}},
+    "data": {
+      "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Income%20Data%20Corrleation.csv",
+      "format": {"type": "csv"}
+    },
+    "mark": {"type": "circle", "color": "orangered", "opacity": 0.7},
+    "height": 300,
+    "width": 300,
+    "background": "#dad9d9",
+
+    "encoding": {
+      "x": {
+        "field": "Crude Rate",
+        "type": "quantitative",
+        "scale": {"domain": [0, 40]},
+        "axis": {"grid": false},
+        "title": "Opioid Death Rate"
+      },
+      "y": {
+        "field": "Income 2019",
+        "type": "quantitative",
+        "axis": {"grid": false},
+        "scale": {"domain": [45000, 102000]},
+        "title": "Average State Income ($)"
+      },
+      "size": {
+        "field": "Population",
+        "type": "quantitative",
+        "title": "",
+        "scale": {"domain": [10000, 30000000]},
+        "legend": null
+      },
+      "tooltip": [
+        {"field": "State", "type": "ordinal", "title": "Country"},
+        {
+          "field": "Income 2019",
+          "type": "quantitative",
+          "title": "Average Income",
+          "format": "$,"
+        },
+        {
+          "field": "Crude Rate",
+          "type": "quantitative",
+          "title": "Opioid Death Rate",
+          "format": ".1f"
+        },
+        {
+          "field": "Population",
+          "type": "quantitative",
+          "title": "Population",
+          "format": ","
+        }
+      ]
+    }
+  }

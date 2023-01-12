@@ -1,0 +1,66 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "US Overdose Deaths by Drug Type",
+    "subtitle": "Number of recorded drug deaths for seven different ICD-10 drug classifications",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 9,
+    "anchor": "start",
+    "color": "black"
+  },
+  "background": "#dad9d9",
+  "width": 250,
+  "height": 250,
+  "data": {
+    "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/All%20Drug%20OD%20-%20whole%20of%20US%20(no%20totals).csv",
+    "format": {"type": "csv"}
+  },
+  "params": [
+    {"name": "highlight", "select":{"type": "point", "on":"mouseover"}},
+    {
+      "name": "yearSelector",
+      "value": 2010,
+      "bind": {
+        "input": "range",
+        "min": 1999,
+        "max": 2020,
+        "step": 1,
+        "name": "Year Selector:"
+      }
+    }
+  ],
+  "mark": {"type": "bar"},
+  "transform": [
+    {"calculate": "toNumber(yearSelector)", "as": "yearS"},
+    {"filter": "datum.yearS == datum.Year"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "Deaths",
+      "type": "quantitative",
+      "title": "Number of Deaths"
+    },
+    
+    "y": {"field": "Multiple Cause of death", "type": "nominal", "title": null, "axis":{"labelFontSize":9}},
+    "color": {
+      "field": "Multiple Cause of death",
+      "type": "nominal",
+      "legend": null,
+      "scale": {"scheme": "set2"},
+
+
+      "fillOpacity":{"condition":{"params":"highlight", "value":1}, "value":0.6
+    }
+    },
+    "tooltip": [
+      {
+        "field": "Multiple Cause of death",
+        "type": "nominal",
+        "title": "Drug Type"
+      },
+      {"field": "Deaths", "type": "nominal", "title": "Overdose Deaths", "format": ","},
+      {"field": "Crude Rate", "type": "nominal", "title": "Overdose Rate"}
+    ]
+  },
+  "config": {}
+}

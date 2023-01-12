@@ -1,0 +1,64 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Regression of Median Home Value on Opioid Deaths  ",
+      "subtitle": ["Crude Opioid Death Rate (x), and Median Home Value (y). Data from 2019"],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/House%20Price%20Correlation.csv"
+    },
+    "height": 300,
+    "width": 300,
+    "background": "#dad9d9",
+
+  
+    "layer": [
+      {
+        "mark": {"type": "circle", "color": "seagreen", "size": 125, "opacity":0.8},
+        "encoding": {
+          "x": {
+            "field": "Crude Rate",
+            "type": "quantitative",
+            "scale": {"domain": [0, 45]},
+            "title": "Opioid Death Rate"
+          },
+          "y": {"field": "Median Home Value",
+          "type": "quantitative", "title": "Median Home Value ($)"},
+
+          "tooltip":[
+            {"field":"State", "type": "nominal", "title":"State"},
+            {"field":"Median Home Value", "type": "quantitative", "title":"Home Value (Median)", "format":"$,"},
+            {"field":"Crude Rate", "type": "quantitative", "title": "Opioid Death Rate"}
+
+          ]
+        }
+      },
+      {
+        "mark": {"type": "line", "color": "black", "opacity": 0.6},
+        "transform": [{"regression": "Median Home Value", "on": "Crude Rate", "extent": [3,43]}],
+        "encoding": {
+          "x": {"field": "Crude Rate", "type": "quantitative"},
+          "y": {"field": "Median Home Value", "type": "quantitative"}
+        }
+      },
+
+      {
+      "transform": [
+        {"regression": "Median Home Value", "on": "Crude Rate", "params": true, "method": "log"},
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+
+      "mark":{
+        "type": "text",
+        "color":"gray",
+        "x":"width",
+        "align":"right",
+        "y":-10
+      },
+      "encoding": {"text":{"type": "nominal", "field":"R2"}}
+     }
+    ]}

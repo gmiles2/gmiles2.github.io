@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Base Map: States of Australia",
+    "fontSize": 13,
+    "anchor": "middle"
+  },
+  "background": "whitesmoke",
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/AusMapGeoJson.json",
+    "format": {"property": "features"}
+  },
+  "projection": {"type": "mercator"},
+  "mark": {
+    "type": "geoshape",
+    "fill": "bisque",
+    "stroke": "darkred",
+    "strokeWidth": 0.6
+  },
+  "encoding": {
+    "tooltip": {
+      "field": "properties.STATE_NAME",
+      "type": "nominal",
+      "title": "State"
+    }
+  },
+  "config": {}
+}

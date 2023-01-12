@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Clusering of Opioid Death Rate and Average State Income",
+      "subtitle": [
+        "Crude Opioid Death Rate (x), Average State Income (y). Data from 2019"],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "config": {"background": "white", "view": {"stroke": "transparent"}},
+    "data": {
+      "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/State%20Income%20CLustering.csv",
+      "format": {"type": "csv"}
+    },
+    "mark": {"type": "circle", "color": "orangered", "opacity": 0.8, "size":95},
+    "height": 250,
+    "width": 250,
+    "background": "#ffffff",
+
+    "encoding": {
+      "x": {
+        "field": "Crude Rate",
+        "type": "quantitative",
+        "scale": {"domain": [0, 40]},
+        "axis": {"grid": false},
+        "title": "Opioid Death Rate (per 100,000)"
+      },
+      "y": {
+        "field": "Income 2019",
+        "type": "quantitative",
+        "axis": {"grid": false},
+        "scale": {"domain": [45000, 102000]},
+        "title": "Average State Income ($)"
+      },
+      "color": {
+        "field": "clusters",
+        "type": "quantitative",
+        "title": "",
+        "scale": {"scheme":"set2"},
+        "legend":null
+      },
+      "tooltip": [
+        {"field": "State", "type": "ordinal", "title": "Country"}
+      ]
+    }
+  }

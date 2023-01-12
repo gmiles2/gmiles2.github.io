@@ -1,0 +1,81 @@
+
+  {"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  
+  
+  "data": {
+    "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Opioid_Dispensing_Rates.csv",
+    "format": {"type": "csv"}
+  },
+
+  "title": {
+    "text": "Opioid Dispensing Rate by US State",
+    "subtitle":["Opioid dispensing rate per 100 persons between 2006 and 2019", "Data collected from the CDC"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "height": 300,
+  "width": 450,
+  "background": "#dad9d9",
+  "config": {"axis": {"grid": true, "gridColor": "#ffffff"}},
+  
+  "mark": {"type": "line", "width":15,
+  "point":{
+    "filled": false,
+    "size": 30
+}},
+
+  "transform": [{"filter": {"selection": "Region"}}],
+  
+  "selection": {
+    "Region": {
+      "type": "single",
+      "fields": ["State"],
+      "bind": {
+        "input": "select",
+        "options": [
+          null, "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
+
+
+        ],
+        "name": "State Selector:"
+      }
+    }
+  },
+
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "title": "Year", "axis":{"labelAlign":"center"}},
+    
+    "y": {
+      "field": "Opioid Dispensing Rate per 100",
+      "type": "quantitative",
+      "title": "Opioid Dispensing Rate per 100 persons"
+    },
+    
+      
+    "color": {
+      "field": "State",
+      "type": "nominal",
+      "legend": null,
+      "scale": {"range": ["#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF","#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#89CFF0", "#0096FF"]
+    }        
+        
+        
+    },
+
+    "tooltip":[
+        {"field": "Opioid Dispensing Rate per 100", "type": "quantitative", "title": "Dispensing Rate"},
+        {"field": "State", "type": "nominal", "title": "State"}
+
+    ]
+
+
+
+    }
+  }
+
+
+
+

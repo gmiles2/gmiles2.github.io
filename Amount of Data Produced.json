@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Amount of Data Produced (Zettabytes) ",
+    "subtitle": "Amount of data produced in each year since 2010, and future predictions",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 9,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 250,
+  "height": 250,
+  "background": "#ffffff",
+  "config": {"axis": {"grid": false}},
+  "data": {
+    "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Big%20Data%20-%20Amount%20Prod.csv"
+  },
+  "mark": {"type": "circle", "color": "orangered", "opacity": 0.6},
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "Year",
+      "axis": {"labelAlign": "center"}
+    },
+
+    "y":{
+      "field":"Data Produced (Zettabytes)",
+      "type": "quantitative"
+    },
+    "size": {
+      "field": "Data Produced (Zettabytes)",
+      "type": "quantitative",
+      "legend": null
+    },
+    "tooltip":[
+      {"field": "Data Produced (Zettabytes)", "type": "nominal", "title": "Zettabytes"},
+       {"field": "Year", "type": "temporal", "title": "Year", "timeUnit": "year"}
+      
+    ]
+  }
+}

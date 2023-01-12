@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Pharmacy Companies Revenues 2012 - 2021",
+    "subtitle": "The revenues of the ten largest pharmacy companies in 2021 displayed over time",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":9,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 310,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Pharma_Rev%20(1).csv"
+  },
+  "mark": "line",
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "Year",
+      "axis": {"labelAlign": "center"}
+    },
+    "y": {
+      "field": "Revenue",
+      "type": "quantitative",
+      "title": "Revenue (billions of $)"
+    },
+    "color": {"field": "Company", "type": "nominal", "legend":{"titleFontSize":11, "labelFontSize":9}}
+  },
+  "config": {}
+}

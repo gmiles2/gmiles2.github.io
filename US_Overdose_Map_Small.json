@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "United States Drug Overdose Rate (2019)",
+      "fontSize": 13,
+      "anchor": "start",
+      "subtitle": "Crude Overdose Rate - The number of overdose deaths adjusted for population size of the state in 2019",
+      "subtitleFontSize": 8,
+      "subtitleFontStyle":"italic"
+    },
+    "background": "whitesmoke",
+    "width": 300,
+    "height": 200,
+    "data": {
+      "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Week7_Maps.json",
+      "format": {"property": "features"}
+    },
+    "projection": {"type": "albersUsa"},
+    "transform": [
+      {
+        "lookup": "properties.NAME",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Week%207%20US%20Drug%20OD%20Map%20(WISDOM).csv"
+          },
+          "key": "State",
+          "fields": ["Crude Rate", "Deaths"]
+        }
+      }
+    ],
+    "mark": {
+      "type": "geoshape",
+      "fiXYZll": "black",
+      "stroke": "darkcyan",
+      "strokeWidth": 0.5
+    },
+    "encoding": {
+      "color": {
+        "field": "Crude Rate",
+        "type": "quantitative",
+        "legend": {"title": "Overdose Rate", "titleFontSize":8},
+        "scale": {"range": ["lightyellow", "orange", "red", "darkred"]}
+      },
+      "tooltip": [
+        {"field": "properties.NAME", "type": "nominal", "title": "State"},
+        {"field": "Crude Rate", "type": "nominal", "title": "Overdose Rate"},
+        {"field": "Deaths", "type": "nominal", "title": "Overdose Deaths"}
+      ]
+    },
+    "config": {}
+  }

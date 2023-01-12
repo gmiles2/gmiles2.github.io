@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Google's stock price over time.",
+  "title": {
+    "text": "GDP per person for the UK",
+    "fontSize": 12,
+    "anchor": "start",
+    "subtitle": "GDP (average) per head, at current prices, SA",
+    "subtitleFontSize": 8,
+    "color": "black"
+  },
+  "width": 150,
+  "height": 150,
+  "data": {
+    "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Data_ONS-IHXT.json",
+    "format": {"type": "json", "property": "years"}
+  },
+  "mark": {
+    "type": "line",
+    "interpolate": "basis",
+    "color": "green",
+    "strokeWidth": 1,
+    "opacity": 1,
+    "clip": true
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "temporal",
+      "title": "Year",
+      "scale": {"domain": [{"year": 1955}, {"year": 2022}]}
+    },
+    "y": {"field": "value", "type": "quantitative", "title": "GDP per head"}
+  },
+  "config": {}
+}

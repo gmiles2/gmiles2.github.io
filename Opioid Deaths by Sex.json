@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  
+  
+  "title": {
+    "text": "US opioid Deaths by Sex ",
+    "subtitle": "The number of opioid related deaths for Males and Females",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 9,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 250,
+  "height": 279,
+  "background": "#dad9d9",
+  "config": {"axis": {"grid": true, "gridColor": "#ffffff"}},
+  "data": {
+    "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Opioid%20Deaths%20M%20vs%20F%20-%20whole%20US.csv"
+  },
+  "mark": {
+    "type": "line",
+    "point": {"filled": false, "fill": "white", "size": 10}
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "Year",
+      "axis": {"labelAlign": "center", "labelAngle": 40}
+    },
+    "y": {
+      "field": "Deaths",
+      "type": "quantitative",
+      "title": "Opioid Overdose Deaths"
+    },
+    "color": {
+      "field": "Gender",
+      "type": "nominal",
+      "scale": {"scheme": "category10"}
+    }
+  }
+}

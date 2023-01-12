@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Total Recorded Drug Overdose Deaths ",
+    "subtitle": "The number of deaths registered as involving any type of drug between 1990 to 2019",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 9,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 250,
+  "height": 250,
+  "background": "#dad9d9",
+  "data": {
+    "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/World%20Drug%20Deaths%20.csv"
+  },
+  "mark": {
+    "type": "line",
+    "point": {"filled": false, "fill": "white", "size": 10}
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "Year",
+      "axis": {"labelAlign": "center"}
+    },
+    "y": {
+      "field": "Total Drug Use Deaths ",
+      "type": "quantitative",
+      "title": "Total Drug Overdose Deaths"
+    },
+    "color": {
+      "field": "Country",
+      "type": "nominal",
+      "scale": {"scheme": "paired"}
+    }
+  },
+  "config": {}
+}

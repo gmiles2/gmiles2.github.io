@@ -1,0 +1,157 @@
+/* CSS styling for the DS project page */
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+
+
+
+
+@media only screen and (min-width: 250px) {
+body{
+    background-color: rgb(94, 94, 94);
+    text-align: center;
+  
+
+ }
+
+
+
+.header{
+  background-color: rgb(94, 94, 94);
+  background-size: contain;
+  border-color: black;
+  margin-bottom: 1px;
+
+  font-family: 'Anton';
+  font-style: normal;
+  font-size: 55px;
+  font-weight: 400;
+
+}
+
+h2{
+    font-family: 'Anton';
+    font-size: 30px;
+
+}
+p{
+    font-family: 'Anybody';
+    font-size: 17px;
+    color: antiquewhite;
+
+}
+
+h3{
+    font-family: 'Bebas Neue';
+    font-size: 25px;
+}
+
+
+
+
+
+
+.chart{
+    background-color: #dad9d9;
+    background-size: contain;
+    border-width: 2.5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    margin-bottom: 4px;
+    margin: 0 auto 0 auto !important;
+    
+
+    height: auto;
+    max-width: auto;
+
+}
+
+.sections{
+  background-color: rgb(94, 94, 94);
+  background-size: contain;
+  border-color: black;
+  margin-bottom: 1px;
+  margin: auto;
+  max-width: 1000px;
+
+    
+
+
+}
+
+
+
+
+
+/* Buttons Styling */
+
+
+a{
+    background-color: rgba(rgb(128, 33, 20), 0.6);
+    padding: 5px;
+
+    border: 3px;
+    border-radius: 10px;
+    border-style: inset;
+    border-color: rgb(0, 0, 0);
+
+    font-family: 'Teko';
+    font-style: unset;
+    font-size: 20px;
+    color: black;
+}
+
+a:hover{
+    background-color: rgba(rgb(20, 128, 47), 0.8);
+
+    border: 3px;
+    border-color: rgb(177, 97, 7);
+    border-style: solid;
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.6s;
+
+}
+
+
+}
+
+
+/*TESTING:
+@media only screen and (min-width: 250px) {
+    .grid_items {
+      grid-template-columns: 100%;
+      max-width: 420px; 
+      margin: 0 auto 0 auto !important;
+      padding: 0 5 0 5; 
+      grid-column-gap: 10px;
+      grid-row-gap: 40px;
+      text-align: center;
+    }
+  
+    .wrap {
+      grid-template-columns: 100%;
+      max-width: 360px; 
+      margin: 0 auto 0 auto !important;
+      padding: 0 5 0 5; 
+      grid-column-gap: 10px;
+      grid-row-gap: 40px;
+      text-align: center;
+    }
+    .grid_items > div {
+      padding: 10px;
+    }
+  
+    .rubric, .rubric-launch {
+      text-align: left;
+    }
+  
+  
+  }

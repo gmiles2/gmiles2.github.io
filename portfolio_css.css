@@ -1,40 +1,53 @@
 
 /* Import a font */
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
 
 /* Set the background color for my page: */
 
 /* Book on colour = Joseph Albers - Interaction of Colour */
 
 body{
-    background-image: linear-gradient(rgb(231, 131, 37),rgb(230, 215, 14));
+    background-color: rgb(188, 231, 170);
     text-align: center;
  }
 
 
 /* Choose the appearance of the tags, h1, h3 and p: */
 h1{
-    color:rgb(228, 121, 22);
-    font-family: 'Maven Pro', sans-serif;
+    color:rgb(0, 0, 0);
+    font-family: 'Zen Dots', sans-serif;
     text-align: center;
 }
 
 h2{
     color:rgb(29, 96, 221);
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Zen Dots', sans-serif;
     text-align: center;
 }
 
-h3, p{
+h3{
     color:rgb(0, 0, 0);
-    font-family: 'Maven Pro', sans-serif;
+    font-size:25px;
+    font-family: 'Teko', sans-serif;
+    text-align: center;
+}
+
+p{
+    color:rgb(0, 0, 0);
+    font-size:15px;
+    font-family: 'Lora', sans-serif;
     text-align: center;
 }
     
 .myWeek1{
     margin: auto;
-    max-width: 600px;
-    background-color: rgb(226, 226, 226);
+    max-width: 800px;
+    background-color: rgb(215, 237, 250);
 
       
     border-width: 4px;
@@ -46,8 +59,8 @@ h3, p{
 
 .myWeek2{
     margin: auto;
-    max-width: 600px;
-    background-color: rgb(226, 226, 226);
+    max-width: 800px;
+    background-color: rgb(245, 218, 218);
 
       
     border-width: 4px;
@@ -57,36 +70,185 @@ h3, p{
     margin-bottom: 10px;
 
 }
+
+.myWeek3{
+    margin: auto;
+    max-width: 800px;
+    background-color: khaki;
+
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(0,0,0);
+    margin-bottom: 10px;
+    
+}
+
+
+.myWeek4{
+    margin: auto;
+    max-width: 800px;
+    background-color: rgb(225, 197, 241);
+
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(0,0,0);
+    margin-bottom: 10px;
+}
+
+.myWeek5{
+    margin: auto;
+    max-width: 800px;
+    background-color: rgb(204, 204, 204);
+
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(0,0,0);
+    margin-bottom: 10px;
+
+}
+
+.myWeek7{
+    margin: auto;
+    max-width: 800px;
+    background-color: rgb(252, 183, 126);
+
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(0,0,0);
+    margin-bottom: 10px;
+}
+
+.myWeek8{
+    margin: auto;
+    max-width: 800px;
+    background-color: rgb(253, 233, 247);
+
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(0,0,0);
+    margin-bottom: 10px;
+}
+
+.myWeek9{
+    margin: auto;
+    max-width: 800px;
+    background-color: rgb(168, 228, 168);
+
+      
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(0,0,0);
+    margin-bottom: 10px;
+}
+
+
+.myWeek10{
+    margin: auto;
+    max-width: 800px;
+    background-color: rgb(154, 218, 255);
+
+      
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(0,0,0);
+    margin-bottom: 10px;
+}
+
+
+.img{
+    align-items: center;
+}
+
 /* Set the apperance of the class, chart */
 .chart{
     background-color: white;
-    width:400px;
-    border-width: 2px;
+    border-width: 2.5px;
     border-style: solid;
-    border-radius: 9px;
+    border-radius: 5px;
     border-color: black;
+    margin-bottom: 4px;
     
+}
+
+.chart7{
+    background-color: white;
+    border-width: 2.5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    margin-bottom: 24px;
+
+}
+
+.chartMaps{
+    background-color: whitesmoke;
+    border-width: 2.5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    margin-bottom: 4px;
+}
+
+.chartNA{
+    background-color: white;
+    border-width: 2.5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+    margin-bottom: 24px;
+
 }
     
 a{
     background-color: rgba(20, 128, 47 0.6);
-    padding: 10px;
+    padding: 3px;
 
-    border: 2px;
+    border: 3px;
     border-radius: 10px;
     border-style: inset;
     border-color: grey;
 
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Teko';
     font-weight: 600;
-    font-size: 17px;
+    font-size: 25px;
     color: black;
 }
 
 a:hover{
     background-color: rgba(rgb(20, 128, 47), 0.8);
 
-    border: 2px;
+    border: 3px;
     border-color: rgb(250, 162, 0);
     border-style: solid;
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.6s;
 }
+
+
+/*Scale the buttons to */
+@media screen and (max-width: 800px) {
+    a {
+      float: none;
+      display: block;
+    }
+  
+    a {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      }
+
+    .chart{
+    stroke: antiquewhite;
+     
+    }  }
+

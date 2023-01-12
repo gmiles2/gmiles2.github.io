@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Gender Make-up within the Programming Industry",
+    "subtitle": "Gender responses from participants in the annual Stack Overflow Developer Survey",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 9,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "width": 250,
+  "height": 250,
+  "background": "#ffffff",
+
+  "params": [
+    {
+      "name": "yearSelector",
+      "value": 2015,
+      "bind": {
+        "input": "select",
+        "options":[2015, 2019, 2022],
+        "name": "Year Selector:"
+      }
+    }
+  ],
+  "data": {
+    "url": "https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Gender%20in%20Coding%20-%20Final.csv"
+  },
+  "mark": {"type": "arc", "innerRadius": 50},
+  "transform": [{"calculate": "toNumber(yearSelector)", "as": "yearS"},
+    {"filter": "datum.yearS == datum.Year"}],
+  "encoding": {
+    "theta": {"field": "Value", "type": "quantitative"},
+    "color": {
+      "field": "Gender",
+      "type": "nominal",
+      "scale": {"scheme": "Set1"}
+    },
+    "tooltip": [
+      {"field": "Gender", "type": "nominal", "title": "Gender"},
+      {"field": "Value", "type": "nominal", "title": "Value"},
+      {"field": "Percentages", "type": "nominal", "title": "%"}
+    ]
+  },
+  "config": {}
+}
