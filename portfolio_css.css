@@ -1,5 +1,5 @@
 
-/* Import a font */
+/* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
@@ -7,9 +7,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
 
-/* Set the background color for my page: */
-
-/* Book on colour = Joseph Albers - Interaction of Colour */
 
 body{
     background-color: rgb(188, 231, 170);
@@ -233,22 +230,4 @@ a:hover{
 }
 
 
-/*Scale the buttons to */
-@media screen and (max-width: 800px) {
-    a {
-      float: none;
-      display: block;
-    }
-  
-    a {
-      position: relative;
-      top: 0;
-      left: 0;
-      transform: none;
-      }
-
-    .chart{
-    stroke: antiquewhite;
-     
-    }  }
 
