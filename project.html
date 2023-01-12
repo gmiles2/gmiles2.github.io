@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!---This is my first attempt at making a portfolio page for my DataScience project ;)-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Title for the page -->
+    <title>Data Science Project</title>
+    <link rel="icon" type="image/x-icon" href="toolbox_icon.png">
+
+    <!-- Link to my style sheet ---- IMPORTANT LINK BETWEEN HTML AND CSS FILES! -->
+    <link rel="stylesheet" href="project_css.css">
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+</head>
+
+<body>
+
+    <div class ="title">
+    
+        <header class = "header">The USA's Drug Problem: The Opioid Epidemic</header>
+    </div>  
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">My Portfolio</a>
+        <a href="https://github.com/gmiles2/gmiles2.github.io"> GitHub Repository</a>
+        <br> <br>
+        <a href="extravisuals.html">Additional Data Visualisations</a>
+
+        <div class = "sections">
+            <h2>Motivation and Aims of the Project</h2>
+            <p>
+                The United States experiences the highest rate of total drug overdoses in the world.
+                Opioids in particular accounted for 74.6% (CDC, 2022) of all drug overdoses in 2020, 
+                with the ongoing opioid epidemic now killing around 70,000 Americans each year.
+            </p>
+            <p>
+                This project aims to provide a greater understanding of the magnitude of the opioid epidemic
+                in the United States and to investigate how and why different areas of the US have been impacted to varying degrees.
+            </p>
+            <a href="https://www.cdc.gov/drugoverdose/deaths/index.html">CDC Reference</a>
+
+        </div>
+
+
+        <div class = "sections">
+            <h2>Opioid Overdose Deaths, A Global Comparison</h2>
+            <p> 
+                This data was taken from a CSV provided by Our World In Data. From this the opioid data was extracted for certain countries 
+                to display the severity of the opioid crisis in America. 
+            </p>
+
+            <div class = "chart" id="Vis2"></div>
+            <br><br>
+
+            <div>
+                <a href="https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/World%20Drug%20Deaths%20.csv" target="_blank">Raw Data</a>
+                <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/FirstGraph_WorldData.json" target="_blank">Code</a>
+                <a href="https://ourworldindata.org/illicit-drug-use?insight=opioids-were-responsible-for-the-largest-number-of-drug-overdoses#key-insights-on-illicit-drug-use" target="_blank">Source</a>
+            </div>
+            
+
+        </div>
+
+        <div class = "sections"> 
+            <h2>Overdose Deaths in the US by Drug Type</h2>
+            <p>
+                The CDC WONDER database was used to separate opioid related deaths by different drug types. 
+                This was done by identifying the ICD-10 death codes relevant to each drug type and creating a custom dataset from the multiple cause of death database. 
+                This was exported as a text file and converted to a CSV using Excel. 
+            </p>
+
+            <p> The majority of the data in this project was collected from the CDC WONDER database. The database was hard to navigate at first but once I understood how the request form functioned 
+                the opioid overdose data could be broken down into many different categories and played a key role in my analysis. All of the datasets made using the database are linked below each visualisation. 
+            </p>
+
+            <div class="chart" id="Vis3"></div>
+            <br><br>
+
+            <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/All%20Drug%20OD%20-%20whole%20of%20US%20(no%20totals).csv" target="_blank">Raw Data</a>
+            <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/OD%20by%20Drug%20Type.json" target="_blank">Code</a>
+            <a href="https://wonder.cdc.gov/mcd-icd10.html" target="_blank">Source</a>
+
+        </div>
+        
+        <div class = "sections">
+            <h2>The Fall of Prescription Opioids</h2>
+
+            <p>
+                For this chart, CDC data tables were scraped from multiple web pages. 
+                The scraper uses a python loop to cycle through the different URLs and then format the results into dataframes. 
+                Some of the data tables for later years had different layouts to the previous ones and so extra cleaning steps of code had to be included before all the data could be concatenated, which unfortunately took away from the automation of the loop. 
+            </p>
+
+            <div class="chart" id="Vis4"></div>
+            <br><br>
+            <a href="https://colab.research.google.com/drive/1Mp60-hfm_6HgIlev8NaUSm4mnddXji28#scrollTo=BHqeQ7XpnDIB" target = "_blank">Python Scraping Code</a>
+            <a href="https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Opioid_Dispensing_Rates.csv" target="_blank">Raw Data</a>
+            <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/Opioid%20Dispensing%20Rates.json" target="_blank">Code</a>
+            <a href="https://www.cdc.gov/drugoverdose/rxrate-maps/state2006.html" target="_blank">Source</a>
+
+            
+        </div>
+
+        <div class = "sections">
+            <h2>US Opioid Deaths and Ethnicity</h2>
+
+            <p>
+                In the remaining data analysis, opioid overdose deaths were defined by the ICD-10 categories as those involving Heroin (T40.1), Prescription Opioids (T40.2) and Synthetic Opioids (T40.4) and the rate is per 100,000 people. 
+            </p>
+
+            <p>
+                This donut chart uses the CDC WONDER database again, but breaks down total opioid deaths by different race categories.
+            </p>
+           
+            <div class = "chart" id = "Vis10"></div>
+            <br><br>
+            <a href="https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Opioid%20Deaths%20by%20Race.csv" target="_blank">Raw Data</a>
+            <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/Opioid%20Deaths%20by%20Race.json" target="_blank">Code</a>
+            <a href="https://wonder.cdc.gov/mcd-icd10.html" target="_blank">Source</a>
+
+        </div>
+
+
+
+        <div class = "sections">
+            <h2>Which Areas of the US are Most Affected by the Opioid Epidemic?</h2>
+            <p>
+                A map of the US opioid death rates of each state between 1999 and 2020 were plotted using the CDC opioid data and a geojson file. 
+            </p>
+
+            <div class = "chart" id="Vis5"></div>
+            <br><br>
+            <a href="https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/All%20Opioids%20-%20US%20Data%20.csv" target="_blank">Raw Data</a>
+            <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/All%20Opioids%20Map.json" target="_blank">Code</a>
+            <a href="https://wonder.cdc.gov/mcd-icd10.html" target="_blank">Source</a>
+      
+        </div>
+
+
+        <div class = "sections">
+            <h2>Why Do Opioid Deaths Vary Between States?</h2>
+            <p>
+                In the final section of this project, three different economic indicators were plotted against the opioid death rate for each state for only 2019
+                to avoid any Covid-19 related noise. Data for the indicators were gathered using three separate web scrapers. For the pandas html reader scrapers the only challenges were
+                cleaning up the formatting of the table headers and rows. For the house price data, Beautiful Soup was used as the pandas html reader would not read the data table. 
+                Beautiful Soup was more complicated to use at first but once the table element was identified in the raw html the data values and headers were extracted separately and then had to be cleaned with a series of string functions before being exported. 
+            </p>
+
+            <p>
+                Unfortunately the correlations for income and house prices were weak and even show a counterintuitive result. The unemployment data is more successful but overall the metrics used did not reveal much of an answer to why the death rate differs across the US.
+            </p>
+
+            <a href="https://colab.research.google.com/drive/1YnECDoo-zGM7Vq7DmgDC6MnNRH_0VvVb#scrollTo=6Qgbo0wgsFhy" target="_blank">Python Web Scraping Code</a>
+
+            <h3>House Prices</h3>
+            <p></p>
+                <div class = "chart" id="Vis11"></div>
+                <br><br>
+                <a href="https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/House%20Price%20Correlation.csv" target="_blank">Raw Data</a>
+                <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/House%20Price%20Regression.json" target="_blank">Code</a>
+                <a href="https://www.experian.com/blogs/ask-experian/research/median-home-values-by-state/" target="_blank">Source</a>
+
+            <h3>Average Income</h3>
+                <div class = "chart" id="Vis12"></div>
+                <br><br>
+                <a href="https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Income%20Data%20Corrleation.csv" target="_blank">Raw Data</a>
+                <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/Income%20Bubble.json" target="_blank">Code</a>
+                <a href="https://fred.stlouisfed.org/release/tables?rid=249&eid=259515&od=2019-01-01#" target="_blank">Source</a>
+
+            <h3>Unemployment Rates</h3>
+                <div class = "chart" id="Vis13"></div>
+                <br><br>
+                <a href="https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Unemployment%20Correlation.csv" target="_blank">Raw Data</a>
+                <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/Unemployment%20Scatter.json" target="_blank">Code</a>
+                <a href="https://www.bls.gov/lau/lastrk19.htm" target="_blank">Source</a>
+
+            
+
+        </div>
+        <div>
+            <br>
+        </div>
+
+        <div class="sections">
+            <h2>Project Conclusions</h2>
+            <p>
+                The charts produced provide some but not all of the answers to the aims outlined at the beginning. The US opioid crisis is by far the worst in the world and is growing deadlier each year.
+                The northern-east coast of the US and specifically the states of West Virginia, Delaware, Maryland and Ohio are experiencing the highest death rates.
+            </p>
+
+            <p>
+                The section which aimed to answer why some states suffer more did not find any strong evidence. Therefore, there is motivation for some further research to be conducted.
+                This could investigate the levels of social care, medical services and inequality rates within each state. It may also be interesting to make wider comparisons between the US and other countries to find out why this has become such a problem amongst Americans. 
+
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+
+
+<script>
+    //Define charts:
+    var myVis1 = "Total_OD_Rate.json";
+    var myVis2 = "FirstGraph_WorldData.json";
+    var myVis3 = "OD by Drug Type.json";
+    var myVis4 = "Opioid Dispensing Rates.json";
+    var myVis5 = "All Opioids Map.json";
+    var myVis6 = "Prescription Opioids Map.json";
+    var myVis7 = "Synthetic Opioids OD Map.json";
+    var myVis8 = "Opioids by Age category.json";
+    var myVis9 = "Opioid Deaths by Sex.json";
+    var myVis10 = "Opioid Deaths by Race.json"
+    var myVis11 = "House Price Regression.json";
+    var myVis12 = "Income Bubble.json";
+    var myVis13 = "Unemployment Scatter.json";
+
+
+    // Embed charts, using vegaEmbed:
+    vegaEmbed('#Vis1', myVis1);
+    vegaEmbed('#Vis2', myVis2);
+    vegaEmbed('#Vis3', myVis3);
+    vegaEmbed('#Vis4', myVis4);
+    vegaEmbed('#Vis5', myVis5);
+    vegaEmbed('#Vis6', myVis6);
+    vegaEmbed('#Vis7', myVis7);
+    vegaEmbed('#Vis8', myVis8);
+    vegaEmbed('#Vis9', myVis9);
+    vegaEmbed('#Vis10', myVis10);
+    vegaEmbed('#Vis11', myVis11);
+    vegaEmbed('#Vis12', myVis12);
+    vegaEmbed('#Vis13', myVis13)
+
+
+</script>
+
+
+
+
+
+
+
+<!------------------- SCREEN SIZE STUFF -------------------->
+
+<!--Script from Richard Davies GitHub page to embed based on the devices screen width-->
+<script>
+    
+// Find the current screen width:
+    let width = screen.width;
+
+// FOR OPIOID DISPENSING VIS:
+// Use an if function to pick the approprite visualisation:
+if (width > 950) {
+  myVis4 = "Opioid Dispensing Rates.json";
+} else if (width > 450) {
+  myVis4 = "Opioid Dispensing Rates (Medium Size).json";
+} else {
+  myVis4 = "Opioid Dispensing Rates (Small Size).json";
+}
+
+// Now embed the chart, which will vary based on screen width:
+vegaEmbed('#Vis4', myVis4, {"actions": false});   
+
+
+// FOR OPIOID DEATHS MAP:
+
+if (width > 950) {
+  myVis5 = "All Opioids Map.json";
+} else if (width > 450) {
+  myVis5 = "All Opioids Map (Medium Size).json";
+} else {
+  myVis5 = "All Opioids Map (Small Size).json";
+}
+
+// Now embed the chart, which will vary based on screen width:
+vegaEmbed('#Vis5', myVis5, {"actions": false});   
+
+
+
+
+
+    
+</script>
+
+</html>
