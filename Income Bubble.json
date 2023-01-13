@@ -27,7 +27,7 @@
         "type": "quantitative",
         "scale": {"domain": [0, 40]},
         "axis": {"grid": false},
-        "title": "Opioid Death Rate"
+        "title": "Opioid Death Rate (per 100,000)"
       },
       "y": {
         "field": "Income 2019",
