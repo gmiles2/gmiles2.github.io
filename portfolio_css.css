@@ -20,6 +20,7 @@ h1{
     font-family: 'Zen Dots', sans-serif;
     text-align: center;
     font-weight: lighter;
+    font-size: 40px;
 
 }
 
@@ -219,7 +220,7 @@ a{
     border-color: grey;
 
     font-family: 'Teko';
-    font-weight: lighter
+    font-weight: lighter;
     font-size: 25px;
     color: black;
 }
