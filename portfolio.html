@@ -5,231 +5,220 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- Title for the page -->
-    <title>Portfolio Work</title>
+    <title>Data Science Project</title>
     <link rel="icon" type="image/x-icon" href="toolbox_icon.png">
 
     <!-- Link to my style sheet ---- IMPORTANT LINK BETWEEN HTML AND CSS FILES! -->
-    <link rel="stylesheet" href="portfolio_css.css">
+    <link rel="stylesheet" href="project_css.css">
 
     <!--The next three lines allow the Vega embed-->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
-
 </head>
 
-
-
 <body>
-    <!-- A div that contains a group of items for week 1. Can be useful for setting background colours etc.  -->
-    <div class="myWeek1">
-        <h1>
-            Data<span style="color:rgb(110, 228, 41)">Science</span>
-            Portfolio
-        </h1>
-        <a href="index.html">Home</a>
-        <a href="project.html">Opioid Project</a>
-        <a href="https://github.com/gmiles2/gmiles2.github.io"> GitHub Repository</a>
 
-
-        <h2>Week 1 - Setting up and embedding two charts</h2>
-
-        <h3>Size of the UK Economy</h3>
-        <p>This interactive graph displays the nominal GDP of the UK economy between 1955 and 2021.
-        </p>
-
-        <div class="chart" id="Vis1"></div>
-        
-
-        <h3>Korea's Ageing Population</h3>
-        <p>The second chart shows how global populations have aged since 1950 and the predicted future trends.
-        </p>
-        <div class="chart" id="Vis2"> </div>
+    <div class ="title">
     
-    </div> 
+        <header class = "header">The USA's Drug Problem: The Opioid Epidemic</header>
+    </div>  
 
-    <div class ="myWeek2">
-        <h2>Week 2 - Two charts: Replication and Original</h2>
-
-        <h3>A chart on outstanding IMF lending</h3>
-        <div class ="chart" id="Vis3"></div>
-
-        <h3>Improvement of the Financial Times graph</h3>
-        <div class="chart" id="Vis4"></div>
-        <p>This second graph, displaying IMF lending as a percentage of global GDP,
-            shows that 1984 was a much riskier year to invest compared to 2022. 
-        </p>
-        
-    </div> 
-
-    <div class ="myWeek3">
-        <h2>Week 3 - Inline Data Objects and Visual Encodings </h2>
-
-        <h3>First Visual Encoding</h3>
-        <div class = "chart" id ="Vis5"></div>
-
-        <h3>Second Visual Encoding</h3>
-        <div class = "chart" id ="Vis6"></div>
-
-        <div>
-            <p></p>
-            <a href="https://colab.research.google.com/drive/1REI3uJ7xQjJ65wL-UhdlPvmwwaNR02fk#scrollTo=J-EaNEDALxUv" target="_blank">Google Colab Code</a>
-        </div>
-        <p> 
-            The second visual encoding uses stacked bars and allows the countries
-            populations to be compared using their relative proportion of the whole bar.
-        </p>
-
-
-    </div>
-
-
-
-    <div class = "myWeek4">
-        <h2>Week 4 - Data Scraping</h2>
-
-        <h3></h3>
-        <div class = "chart7" id = "Vis7"></div>
-        <div>
-
-            <a href="https://en.wikipedia.org/wiki/List_of_largest_biomedical_companies_by_revenue" target="_blank">Data Source</a>
-            <a href="https://colab.research.google.com/drive/1Nc-ePChBTFmI1pdM_A1tbl3oRnAWiulb#scrollTo=EfVK5EyOM8sh" target="_blank">Google Colab Code</a>
-        
-        </div>
-        <p>
-            Wikipedia was used as it compiles the data from hundreds of companies
-            financial reports, many of which are PDF’s and are hard to access.
-        </p>
-            
-        
-    </div>
-
-    <div class = "myWeek5">
-        <h2>Week 5 - Nine Charts: Build an API Dashboard</h2>
-
-        <h3>UK Labour Market</h3>
-        <div class = "chart" id = "Vis8"></div>
-        <div class = "chart" id = "Vis9"></div>
-        <div class = "chart" id = "Vis10"></div>
-
-        <h3>UK Exchange Rates</h3>
-        <div class = "chart" id = "Vis11"></div>
-        <div class = "chart" id = "Vis12"></div>
-        <div class = "chart" id = "Vis13"></div>
-
-        <h3>UK National Accounts</h3>
-        <div class = "chartNA" id = "Vis14"></div>
-        <div class = "chartNA" id = "Vis15"></div>
-        <div class = "chartNA" id = "Vis16"></div>
-
-        <div>
-            <a href="https://colab.research.google.com/drive/1hcvRqQcYlUp9bMCzuvrDYi1FGq5W4yLm#scrollTo=4crNqtnnFgO6" target="_blank">Google Colab Code</a>
-        </div>
-        <p></p>
-
-    </div>
-
-    <div class = "myWeek7">
-        <h2>Week 7: Base Map and Choropleth Map</h2>
-
-        <h3>Task 1: Base Map of Australia</h3>
-        <div class = "chartMaps" id = "Vis17"></div>
-
-        <h3>Task 2: US Choropleth Map</h3>
-        <div class = "chartMaps" id = "Vis18"></div>
-
-        <p>
-            In 2019 the US states with the highest drug overdose rates are concentrated in the northern-east coast region of America. 
-        </p>
-
-
-    </div>
-
-    <div class = "myWeek8">
-        <h2>Week 8: The Festival of Economics: Big Data Arguments</h2>
-            <h3>"There is a lack of gender diversity in the programming community"</h3>
-                <div class = "chart" id = "Vis19"></div>
-                <p> 
-                    There has been little progression in the gender diversity of programming languages users.
-                </p>
-
-            <h3>"The volume of data produced has been increasing year on year"</h3>
-                <div class = "chart" id = "Vis20"></div>
-                <p> 
-                    The amount of data produced is predicted to increase exponentially.
-                </p>
-    </div>
-
-
-    <div class = "myWeek9">
-        <h2>Week 9: Advanced Analytics</h2>
-            <h3>Bubble Chart</h3>
-                 <div class = "chart" id = "Vis21"></div>
-
-             <h3>Regression Scatter</h3>
-                <div class = "chart" id = "Vis22"></div>
-                
-
-    </div>
-
-
-    <div class = "myWeek10">
-        <h2>Week 10/11: Machine Learning Techniques</h2>
-
-            <h3>Unsupervised Machine Learning: K-Means Clustering</h3>
-            <p>“States with higher average incomes will have lower opioid death rates”</p>
-            <div class = "chart" id="Vis23"></div>
-
-            <p>Within each income category, a spread of different death rates is seen. The states with highest incomes also have some of the highest death rates.</p>
-
-
-            <h3>Supervised Machine Learning: Linear Regression</h3>
-            <p>“The opioid death rate will fall as the average state income increases, displaying a negative correlation”</p>
-            <img src="income_regression.png" alt="">
-
-            <p>The regression results show a counter-intuitive positive correlation, as income increases the opioid death rate rises.</p>
-            <br>
-
-            <a href="https://colab.research.google.com/drive/1uYPok__iDGjlNUJATOWqXhrRdiw69nOu#scrollTo=KHqhq66kF29m" target="_blank">Google Colab Code</a>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">My Portfolio</a>
+        <a href="https://github.com/gmiles2/gmiles2.github.io"> GitHub Repository</a>
         <br> <br>
+        <a href="extravisuals.html">Additional Data Visualisations</a>
+
+        <div class = "sections">
+            <h2>Motivation and Aims of the Project</h2>
+            <p>
+                The United States experiences the highest rate of total drug overdoses in the world.
+                Opioids in particular accounted for 74.6% (CDC, 2022) of all drug overdoses in 2020, 
+                with the ongoing opioid epidemic now killing around 70,000 Americans each year.
+            </p>
+            <p>
+                This project aims to provide a greater understanding of the magnitude of the opioid epidemic
+                in the United States and to investigate how and why different areas of the US have been impacted to varying degrees.
+            </p>
+            <a href="https://www.cdc.gov/drugoverdose/deaths/index.html">CDC Reference</a>
+
+        </div>
+
+
+        <div class = "sections">
+            <h2>Opioid Overdose Deaths, A Global Comparison</h2>
+            <p> 
+                This data was taken from a CSV file provided by Our World in Data. The opioid specific data was extracted for a selection of countries to display the severity of the opioid crisis in America. 
+            </p>
+
+            <div class = "chart" id="Vis2"></div>
+            <br><br>
+
+            <div>
+                <a href="https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/World%20Drug%20Deaths%20.csv" target="_blank">Raw Data</a>
+                <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/FirstGraph_WorldData.json" target="_blank">Code</a>
+                <a href="https://ourworldindata.org/illicit-drug-use?insight=opioids-were-responsible-for-the-largest-number-of-drug-overdoses#key-insights-on-illicit-drug-use" target="_blank">Source</a>
+            </div>
+            
+
+        </div>
+
+        <div class = "sections"> 
+            <h2>Overdose Deaths in the US by Drug Type</h2>
+            <p>
+                The CDC WONDER database was used to separate drug overdose deaths by different drug types. This was done by identifying the ICD-10 death codes for each drug category and creating a custom dataset from the multiple cause of death database. This was exported as a text file and converted to a CSV file using Excel. 
+            </p>
+
+            <p>The majority of the data in this project was collected from the CDC WONDER database. The database was hard to navigate at first but once I understood how the request form functioned the opioid overdose data could be broken down into many different categories and played a key role in my analysis. All of the datasets made using the database are linked below each visualisation. </p>
+
+            <div class="chart" id="Vis3"></div>
+            <br><br>
+
+            <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/All%20Drug%20OD%20-%20whole%20of%20US%20(no%20totals).csv" target="_blank">Raw Data</a>
+            <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/OD%20by%20Drug%20Type.json" target="_blank">Code</a>
+            <a href="https://wonder.cdc.gov/mcd-icd10.html" target="_blank">Source</a>
+
+        </div>
+        
+        <div class = "sections">
+            <h2>The Fall of Prescription Opioids</h2>
+
+            <p>
+                For this chart, CDC data tables were scraped from multiple web pages. The scraper uses a python loop to cycle through the different URLs and then format the results into data frames. Some of the data tables for later years had different layouts to the previous ones and so extra code had to be included to clean the data before concatenation was possible, which unfortunately disrupted the automation of the loop. 
+            </p>
+
+            <div class="chart" id="Vis4"></div>
+            <br><br>
+            <a href="https://colab.research.google.com/drive/1Mp60-hfm_6HgIlev8NaUSm4mnddXji28#scrollTo=BHqeQ7XpnDIB" target = "_blank">Python Scraping Code</a>
+            <a href="https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Opioid_Dispensing_Rates.csv" target="_blank">Raw Data</a>
+            <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/Opioid%20Dispensing%20Rates.json" target="_blank">Code</a>
+            <a href="https://www.cdc.gov/drugoverdose/rxrate-maps/state2006.html" target="_blank">Source</a>
+
+            
+        </div>
+
+        <div class = "sections">
+            <h2>US Opioid Deaths and Ethnicity</h2>
+
+            <p>
+                In the remaining data analysis, opioid overdose deaths were defined by the ICD-10 categories as those involving Heroin (T40.1), Prescription Opioids (T40.2) and Synthetic Opioids (T40.4) and the crude rate is per 100,000 people. 
+            </p>
+
+            <p>
+                This donut chart uses the CDC WONDER database and breaks down total opioid deaths by different ethnic groups.
+            </p>
+           
+            <div class = "chart" id = "Vis10"></div>
+            <br><br>
+            <a href="https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Opioid%20Deaths%20by%20Race.csv" target="_blank">Raw Data</a>
+            <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/Opioid%20Deaths%20by%20Race.json" target="_blank">Code</a>
+            <a href="https://wonder.cdc.gov/mcd-icd10.html" target="_blank">Source</a>
+
+        </div>
+
+
+
+        <div class = "sections">
+            <h2>Which Areas of the US are Most Affected by the Opioid Epidemic?</h2>
+            <p>
+                The following map shows the opioid deaths rates in each US state between 1999 and 2020, which was plotted by using the CDC opioid data and a US geojson file. 
+            </p>
+
+            <div class = "chart" id="Vis5"></div>
+            <br><br>
+            <a href="https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/All%20Opioids%20-%20US%20Data%20.csv" target="_blank">Raw Data</a>
+            <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/All%20Opioids%20Map.json" target="_blank">Code</a>
+            <a href="https://wonder.cdc.gov/mcd-icd10.html" target="_blank">Source</a>
+      
+        </div>
+
+
+        <div class = "sections">
+            <h2>Why Do Opioid Deaths Vary Between States?</h2>
+            <p>
+                In the final section of this project, three different economic indicators were plotted against the opioid death rate for each state. Data from 2019 was used to avoid any Covid-19 related noise. Data for the indicators was gathered using three separate web scrapers. With the two html reader scrapers the only challenges were cleaning up the formatting of the table headers and rows. For the house price data, Beautiful Soup was used as pandas could not read the data table. Beautiful Soup was more complicated to use at first but once the table element was identified within the raw html, the data values and headers were extracted separately. This then had to be cleaned with a series of string functions before being exported. 
+            </p>
+
+            <p>
+                Unfortunately, the correlations for income and house prices are weak and even show a counter-intuitive result. The unemployment data is more successful but overall the metrics used do not reveal much of an answer to why the death rate differs across the US.
+            </p>
+
+            <a href="https://colab.research.google.com/drive/1YnECDoo-zGM7Vq7DmgDC6MnNRH_0VvVb#scrollTo=6Qgbo0wgsFhy" target="_blank">Python Web Scraping Code</a>
+
+            <h3>House Prices</h3>
+            <p></p>
+                <div class = "chart" id="Vis11"></div>
+                <br><br>
+                <a href="https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/House%20Price%20Correlation.csv" target="_blank">Raw Data</a>
+                <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/House%20Price%20Regression.json" target="_blank">Code</a>
+                <a href="https://www.experian.com/blogs/ask-experian/research/median-home-values-by-state/" target="_blank">Source</a>
+
+            <h3>Average Income</h3>
+                <div class = "chart" id="Vis12"></div>
+                <br><br>
+                <a href="https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Income%20Data%20Corrleation.csv" target="_blank">Raw Data</a>
+                <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/Income%20Bubble.json" target="_blank">Code</a>
+                <a href="https://fred.stlouisfed.org/release/tables?rid=249&eid=259515&od=2019-01-01#" target="_blank">Source</a>
+
+            <h3>Unemployment Rates</h3>
+                <div class = "chart" id="Vis13"></div>
+                <br><br>
+                <a href="https://raw.githubusercontent.com/gmiles2/gmiles2.github.io/main/Unemployment%20Correlation.csv" target="_blank">Raw Data</a>
+                <a href="https://github.com/gmiles2/gmiles2.github.io/blob/main/Unemployment%20Scatter.json" target="_blank">Code</a>
+                <a href="https://www.bls.gov/lau/lastrk19.htm" target="_blank">Source</a>
+
+            
+
+        </div>
+        <div>
+            <br>
+        </div>
+
+        <div class="sections">
+            <h2>Project Conclusions</h2>
+            <p>
+                The data visualisations produced provide some but not all of the answers to the aims initially outlined. The US opioid crisis is by far the worst in the world and is growing deadlier each year with the emergence of new synthetic opioids, and is currently affecting the black population the most. The northern-east coast of the US and specifically the states of West Virginia, Delaware, Maryland and Ohio are experiencing the highest death rates.
+            </p>
+
+            <p>
+                The final section which aimed to answer why some states suffer more did not produce strong evidence. Therefore, there is motivation for some further research to be conducted. This could investigate the levels of social care, medical services and inequality within each state. It may also be interesting to make wider comparisons between the US and other countries to find out why this has become such a problem for America. 
+            </p>
+        </div>
     </div>
+
+
+
 
 
 
 </body>
 
-    <!---->
+
+
 <script>
-    //Define the charts:
-    var myVis1 = "new_vis1_interactive.json";
-    var myVis2 = "new_vis2_population.json";
-    var myVis3 = "IMFLending1.json";
-    var myVis4 = "FTCorrected2.json";
-    var myVis5 = "week3_population_1.json";
-    var myVis6 = "week3_population_2.json";
-    var myVis7 = "Week4_Pharma_Revenues.json"
-    var myVis8 = "Unemployment Rate.json"
-    var myVis9 = "Employment Rate.json"
-    var myVis10 = "Youth Employment.json"
-    var myVis11 = "USD Ex Rate.json"
-    var myVis12 = "Euro Ex Rate.json"
-    var myVis13 = "Yen Ex Rate.json"
-    var myVis14 = "GDP Growth.json"
-    var myVis15 = "GDP per person.json"
-    var myVis16 = "Gov Final Exp.json"
-    var myVis17 = "Auss_Map1.json"
-    var myVis18 = "US_Overdose_Map2.json"
-    var myVis19 = "Gender in Coding.json"
-    var myVis20 = "Amount of Data Produced.json"
-    var myVis21 = "week9_bubble_chart_income.json"
-    var myVis22 = "week9_regression_house.json"
-    var myVis23 = "K_Means_Clustering.json"
+    //Define charts:
+    var myVis1 = "Total_OD_Rate.json";
+    var myVis2 = "FirstGraph_WorldData.json";
+    var myVis3 = "OD by Drug Type.json";
+    var myVis4 = "Opioid Dispensing Rates.json";
+    var myVis5 = "All Opioids Map.json";
+    var myVis6 = "Prescription Opioids Map.json";
+    var myVis7 = "Synthetic Opioids OD Map.json";
+    var myVis8 = "Opioids by Age category.json";
+    var myVis9 = "Opioid Deaths by Sex.json";
+    var myVis10 = "Opioid Deaths by Race.json"
+    var myVis11 = "House Price Regression.json";
+    var myVis12 = "Income Bubble.json";
+    var myVis13 = "Unemployment Scatter.json";
 
 
-    // Embed charts, using the vegaEmbed tool:
+    // Embed charts, using vegaEmbed:
     vegaEmbed('#Vis1', myVis1);
     vegaEmbed('#Vis2', myVis2);
     vegaEmbed('#Vis3', myVis3);
@@ -242,110 +231,57 @@
     vegaEmbed('#Vis10', myVis10);
     vegaEmbed('#Vis11', myVis11);
     vegaEmbed('#Vis12', myVis12);
-    vegaEmbed('#Vis13', myVis13);
-    vegaEmbed('#Vis14', myVis14);
-    vegaEmbed('#Vis15', myVis15);
-    vegaEmbed('#Vis16', myVis16);
-    vegaEmbed('#Vis17', myVis17);
-    vegaEmbed('#Vis18', myVis18);
-    vegaEmbed('#Vis19', myVis19);
-    vegaEmbed('#Vis20', myVis20);
-    vegaEmbed('#Vis21', myVis21);
-    vegaEmbed('#Vis22', myVis22);
-    vegaEmbed('#Vis23', myVis23);
-
+    vegaEmbed('#Vis13', myVis13)
 
 
 </script>
 
 
+
+
+
+
+
+<!------------------- SCREEN SIZE STUFF -------------------->
 
 <!--Script from Richard Davies GitHub page to embed based on the devices screen width-->
 <script>
     
-    // Find the current screen width:
-        let width = screen.width;
+// Find the current screen width:
+    let width = screen.width;
 
-    //WEEK 3 VISUAL 1
-    
-    // Use an if function to pick the approprite visualisation:
-    if (width > 950) {
-      myVis5 = "week3_population_1.json";
-    } else if (width > 450) {
-      myVis5= "week3_pop_1_medium.json";
-    } else {
-      myVis5 = "week3_pop_1_small.json";
-    }
-    
-    // Now embed the chart, which will vary based on screen width:
-    vegaEmbed('#Vis5', myVis5, {"actions": false});   
+// FOR OPIOID DISPENSING VIS:
+// Use an if function to pick the approprite visualisation:
+if (width > 950) {
+  myVis4 = "Opioid Dispensing Rates.json";
+} else if (width > 450) {
+  myVis4 = "Opioid Dispensing Rates (Medium Size).json";
+} else {
+  myVis4 = "Opioid Dispensing Rates (Small Size).json";
+}
 
+// Now embed the chart, which will vary based on screen width:
+vegaEmbed('#Vis4', myVis4, {"actions": false});   
+
+
+// FOR OPIOID DEATHS MAP:
+
+if (width > 950) {
+  myVis5 = "All Opioids Map.json";
+} else if (width > 450) {
+  myVis5 = "All Opioids Map (Medium Size).json";
+} else {
+  myVis5 = "All Opioids Map (Small Size).json";
+}
+
+// Now embed the chart, which will vary based on screen width:
+vegaEmbed('#Vis5', myVis5, {"actions": false});   
+
+
+
+
+
+    
 </script>
-
-<script>
-    //WEEK 3 VISUAL 2
-
-    // Use an if function to pick the approprite visualisation:
-    if (width > 950) {
-      myVis6 = "week3_population_2.json";
-    } else if (width > 450) {
-      myVis6 = "week3_pop_2_medium.json";
-    } else {
-      myVis6 = "week3_pop_2_small.json";
-    }
-    
-    // Now embed the chart, which will vary based on screen width:
-    vegaEmbed('#Vis6', myVis6, {"actions": false});   
-
-</script>
-
-<script>
-    // WEEK 4:
-    
-    // Use an if function to pick the approprite visualisation:
-    if (width > 950) {
-      myVis7 = "Week4_Pharma_Revenues.json";
-    } else {
-      myVis7 = "week4_phone.json";
-    }
-    
-    // Now embed the chart, which will vary based on screen width:
-    vegaEmbed('#Vis7', myVis7, {"actions": false});   
-
-</script>
-
-
-<script>
-    // WEEK 7 (1):
-    
-    // Use an if function to pick the approprite visualisation:
-    if (width > 950) {
-      myVis17 = "Auss_Map1.json";
-    } else {
-      myVis17 = "Auss_Map_Small.json";
-    }
-    
-    // Now embed the chart, which will vary based on screen width:
-    vegaEmbed('#Vis17', myVis17, {"actions": false});   
-
-</script>
-
-<script>
-    // WEEK 7 (2):
-    
-    // Use an if function to pick the approprite visualisation:
-    if (width > 950) {
-      myVis18 = "US_Overdose_Map2.json";
-    } else {
-      myVis18 = "US_Overdose_Map_Small.json";
-    }
-    
-    // Now embed the chart, which will vary based on screen width:
-    vegaEmbed('#Vis18', myVis18, {"actions": false});   
-
-</script>
-
 
 </html>
-
-
