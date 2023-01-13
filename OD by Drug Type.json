@@ -3,7 +3,7 @@
   "title": {
     "text": "US Overdose Deaths by Drug Type",
     "subtitle": ["Number of recorded drug deaths for seven different ICD-10 drug classifications",
-                 "'Other opioids' includes all prescribed opioids and 'Other synthetic narcotics' includes a number of synthetic opioids"],
+                 "'Other opioids' includes prescription opioids and 'Other synthetic narcotics' includes synthetic opioids"],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 9,
     "anchor": "start",
