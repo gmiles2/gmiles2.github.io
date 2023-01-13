@@ -54,8 +54,7 @@
         <div class = "sections">
             <h2>Opioid Overdose Deaths, A Global Comparison</h2>
             <p> 
-                This data was taken from a CSV provided by Our World In Data. From this the opioid data was extracted for certain countries 
-                to display the severity of the opioid crisis in America. 
+                This data was taken from a CSV file provided by Our World in Data. The opioid specific data was extracted for a selection of countries to display the severity of the opioid crisis in America. 
             </p>
 
             <div class = "chart" id="Vis2"></div>
@@ -73,14 +72,10 @@
         <div class = "sections"> 
             <h2>Overdose Deaths in the US by Drug Type</h2>
             <p>
-                The CDC WONDER database was used to separate opioid related deaths by different drug types. 
-                This was done by identifying the ICD-10 death codes relevant to each drug type and creating a custom dataset from the multiple cause of death database. 
-                This was exported as a text file and converted to a CSV using Excel. 
+                The CDC WONDER database was used to separate drug overdose deaths by different drug types. This was done by identifying the ICD-10 death codes for each drug category and creating a custom dataset from the multiple cause of death database. This was exported as a text file and converted to a CSV file using Excel. 
             </p>
 
-            <p> The majority of the data in this project was collected from the CDC WONDER database. The database was hard to navigate at first but once I understood how the request form functioned 
-                the opioid overdose data could be broken down into many different categories and played a key role in my analysis. All of the datasets made using the database are linked below each visualisation. 
-            </p>
+            <p>The majority of the data in this project was collected from the CDC WONDER database. The database was hard to navigate at first but once I understood how the request form functioned the opioid overdose data could be broken down into many different categories and played a key role in my analysis. All of the datasets made using the database are linked below each visualisation. </p>
 
             <div class="chart" id="Vis3"></div>
             <br><br>
@@ -95,9 +90,7 @@
             <h2>The Fall of Prescription Opioids</h2>
 
             <p>
-                For this chart, CDC data tables were scraped from multiple web pages. 
-                The scraper uses a python loop to cycle through the different URLs and then format the results into dataframes. 
-                Some of the data tables for later years had different layouts to the previous ones and so extra cleaning steps of code had to be included before all the data could be concatenated, which unfortunately took away from the automation of the loop. 
+                For this chart, CDC data tables were scraped from multiple web pages. The scraper uses a python loop to cycle through the different URLs and then format the results into data frames. Some of the data tables for later years had different layouts to the previous ones and so extra code had to be included to clean the data before concatenation was possible, which unfortunately disrupted the automation of the loop. 
             </p>
 
             <div class="chart" id="Vis4"></div>
@@ -114,11 +107,11 @@
             <h2>US Opioid Deaths and Ethnicity</h2>
 
             <p>
-                In the remaining data analysis, opioid overdose deaths were defined by the ICD-10 categories as those involving Heroin (T40.1), Prescription Opioids (T40.2) and Synthetic Opioids (T40.4) and the rate is per 100,000 people. 
+                In the remaining data analysis, opioid overdose deaths were defined by the ICD-10 categories as those involving Heroin (T40.1), Prescription Opioids (T40.2) and Synthetic Opioids (T40.4) and the crude rate is per 100,000 people. 
             </p>
 
             <p>
-                This donut chart uses the CDC WONDER database again, but breaks down total opioid deaths by different race categories.
+                This donut chart uses the CDC WONDER database and breaks down total opioid deaths by different ethnic groups.
             </p>
            
             <div class = "chart" id = "Vis10"></div>
@@ -134,7 +127,7 @@
         <div class = "sections">
             <h2>Which Areas of the US are Most Affected by the Opioid Epidemic?</h2>
             <p>
-                A map of the US opioid death rates of each state between 1999 and 2020 were plotted using the CDC opioid data and a geojson file. 
+                The following map shows the opioid deaths rates in each US state between 1999 and 2020, which was plotted by using the CDC opioid data and a US geojson file. 
             </p>
 
             <div class = "chart" id="Vis5"></div>
@@ -149,14 +142,11 @@
         <div class = "sections">
             <h2>Why Do Opioid Deaths Vary Between States?</h2>
             <p>
-                In the final section of this project, three different economic indicators were plotted against the opioid death rate for each state for only 2019
-                to avoid any Covid-19 related noise. Data for the indicators were gathered using three separate web scrapers. For the pandas html reader scrapers the only challenges were
-                cleaning up the formatting of the table headers and rows. For the house price data, Beautiful Soup was used as the pandas html reader would not read the data table. 
-                Beautiful Soup was more complicated to use at first but once the table element was identified in the raw html the data values and headers were extracted separately and then had to be cleaned with a series of string functions before being exported. 
+                In the final section of this project, three different economic indicators were plotted against the opioid death rate for each state. Data from 2019 was used to avoid any Covid-19 related noise. Data for the indicators was gathered using three separate web scrapers. With the two html reader scrapers the only challenges were cleaning up the formatting of the table headers and rows. For the house price data, Beautiful Soup was used as pandas could not read the data table. Beautiful Soup was more complicated to use at first but once the table element was identified within the raw html, the data values and headers were extracted separately. This then had to be cleaned with a series of string functions before being exported. 
             </p>
 
             <p>
-                Unfortunately the correlations for income and house prices were weak and even show a counterintuitive result. The unemployment data is more successful but overall the metrics used did not reveal much of an answer to why the death rate differs across the US.
+                Unfortunately, the correlations for income and house prices are weak and even show a counter-intuitive result. The unemployment data is more successful but overall the metrics used do not reveal much of an answer to why the death rate differs across the US.
             </p>
 
             <a href="https://colab.research.google.com/drive/1YnECDoo-zGM7Vq7DmgDC6MnNRH_0VvVb#scrollTo=6Qgbo0wgsFhy" target="_blank">Python Web Scraping Code</a>
@@ -193,14 +183,11 @@
         <div class="sections">
             <h2>Project Conclusions</h2>
             <p>
-                The charts produced provide some but not all of the answers to the aims outlined at the beginning. The US opioid crisis is by far the worst in the world and is growing deadlier each year.
-                The northern-east coast of the US and specifically the states of West Virginia, Delaware, Maryland and Ohio are experiencing the highest death rates.
+                The data visualisations produced provide some but not all of the answers to the aims initially outlined. The US opioid crisis is by far the worst in the world and is growing deadlier each year with the emergence of new synthetic opioids, and is currently affecting the black population the most. The northern-east coast of the US and specifically the states of West Virginia, Delaware, Maryland and Ohio are experiencing the highest death rates.
             </p>
 
             <p>
-                The section which aimed to answer why some states suffer more did not find any strong evidence. Therefore, there is motivation for some further research to be conducted.
-                This could investigate the levels of social care, medical services and inequality rates within each state. It may also be interesting to make wider comparisons between the US and other countries to find out why this has become such a problem amongst Americans. 
-
+                The final section which aimed to answer why some states suffer more did not produce strong evidence. Therefore, there is motivation for some further research to be conducted. This could investigate the levels of social care, medical services and inequality within each state. It may also be interesting to make wider comparisons between the US and other countries to find out why this has become such a problem for America. 
             </p>
         </div>
     </div>
