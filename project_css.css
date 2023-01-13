@@ -38,6 +38,7 @@ body{
 h2{
     font-family: 'Anton';
     font-size: 30px;
+    font-weight: lighter;
 
 }
 p{
@@ -50,6 +51,7 @@ p{
 h3{
     font-family: 'Bebas Neue';
     font-size: 25px;
+    font-weight: lighter;
 }
 
 
