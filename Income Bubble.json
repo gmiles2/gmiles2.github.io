@@ -4,7 +4,7 @@
       "text": "Opioid Death Rate Vs Average State Income",
       "subtitle": [
         "Crude Opioid Death Rate (x), Average State Income (y). Data from 2019",
-        "Size of points based on popluation", ""
+        "Size of points is relative to popluation size", ""
       ],
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10,
