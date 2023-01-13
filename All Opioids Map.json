@@ -7,11 +7,11 @@
     
   
     "title": {
-        "text": "Overdoses from all types of Opioids in the United States",
+        "text": "The Opioid Death Rate Across the United States",
         "fontSize": 12,
-        "subtitle":"Which ICD categories are included as 'ALL OPIOIDS'",
+        "subtitle":"Crude opioid death rate per 100,000 people, between 1999 and 2020",
         "subtitleFontStyle":"italic",
-        "subtitleFontSize":10, "anchor": "middle"},
+        "subtitleFontSize":10, "anchor": "start"},
   
     "params": [    
     {"name":"yearSelector", "value":2010,
@@ -57,7 +57,7 @@
             "field":"Crude Rate",
             "type": "quantitative",
             "legend":{
-                "title":null, "orient": "right","direction": "vertical"},
+                "title": "Death Rate", "orient": "right","direction": "vertical"},
             "scale":{"range":["lightyellow", "orange", "red", "darkred"]}},
   
       "tooltip": [
