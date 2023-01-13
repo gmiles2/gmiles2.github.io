@@ -24,7 +24,7 @@
           "field": "Crude Rate",
           "type": "quantitative",
           "scale": {"domain": [0, 45]},
-          "title": "Opioid Death Rate"
+          "title": "Opioid Death Rate (per 100,000)"
         },
         "y": {"field": "Unemployment 2019", "type": "quantitative", "title": "Unemployment Rate (%)", "scale":{"domain":[1,6]}},
 
